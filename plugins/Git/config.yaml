@@ -1,0 +1,12 @@
+name: Git
+version: 0.1
+
+settings:
+  local_git_repo:
+    scope: blog
+    default: ''
+
+callbacks:
+  cms_post_save.entry: $Git::Git::Util::post_save_entry
+
+blog_config_template: blog_config.tmpl
